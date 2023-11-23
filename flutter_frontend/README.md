@@ -12,7 +12,9 @@ This app features a clean, easy to overview pattern and coding-style that scales
 1. Download and install flutter https://docs.flutter.dev/get-started/install
 2. Run ```flutter pub get``` to fetch all dependencies
 3. Run ```dart run build_runner build``` to generate required files.
-4. Open / connect a device, emulator or browser of your choice and start the app with ```flutter run```
+4. Open or connect a device, emulator or browser of your choice and start the app with ```flutter run```
+
+Alternatively  you can execute `make` when flutter is installed and a device, emulator or browser is connected.
 
 ## Tests
 

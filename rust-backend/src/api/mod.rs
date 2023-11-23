@@ -20,7 +20,7 @@ pub async fn run_server() -> io::Result<()> {
             .service(routes::preflight_tasks)
             .service(routes::preflight_tasks_id)
     })
-        .bind(("127.0.0.1", 8090))? // TODO change to 0.0.0.0
+        .bind(("127.0.0.1", 8090))?
         .run()
         .await
 }
