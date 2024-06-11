@@ -1,0 +1,17 @@
+### Get Health
+GET localhost:8090/health
+
+### Get Tasks
+GET localhost:8090/tasks
+
+### Create Task
+POST localhost:8090/tasks
+Content-Type: application/json
+
+{
+  "title": "Test",
+  "description": "test task"
+}
+
+### Mark Task as done
+DELETE localhost:8090/tasks/{id)
