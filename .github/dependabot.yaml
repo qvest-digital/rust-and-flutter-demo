@@ -1,0 +1,12 @@
+version: 2
+
+updates:
+  - package-ecosystem: "cargo"
+    directory: "/rust-backend"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "pub"
+    directory: "/flutter_frontend"
+    schedule:
+      interval: "weekly"
