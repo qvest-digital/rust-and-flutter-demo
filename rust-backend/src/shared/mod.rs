@@ -13,7 +13,7 @@ pub struct Task {
     pub done: bool,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct CreateTask {
     pub title: String,
     pub description: Option<String>,
