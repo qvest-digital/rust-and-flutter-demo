@@ -1,0 +1,14 @@
+name: Check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  check-backend:
+    uses: ./rust-backend/.github/workflows/check.yaml
+  check-frontend:
+    uses: ./flutter_frontend/.github/workflows/check.yaml
