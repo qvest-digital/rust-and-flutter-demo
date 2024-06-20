@@ -9,6 +9,40 @@ on:
 
 jobs:
   check-backend:
-    uses: qvest-digital/rust-and-flutter-demo/rust-backend/.github/workflows/check.yaml@main
+    name: Check Backend
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - name: Run Cargo Check
+        working-directory: rust-backend
+        run: cargo check
+      - name: Run Unit Tests
+        working-directory: rust-backend
+        run: cargo test
   check-frontend:
-    uses: qvest-digital/rust-and-flutter-demo/flutter_frontend/.github/workflows/check.yaml@main
+    name: Check Frontend
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version-file: flutter_frontend/pubspec.yaml
+      - name: Run Flutter Version
+        run: flutter --version
+      - name: Get Dependencies
+        working-directory: flutter_frontend
+        run: flutter pub get
+      - name: Analyze Code
+        working-directory: flutter_frontend
+        run: flutter analyze
+      - name: Run Tests
+        working-directory: flutter_frontend
+        run: flutter test
