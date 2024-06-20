@@ -38,6 +38,9 @@ jobs:
       - name: Get Dependencies
         working-directory: flutter_frontend
         run: flutter pub get
+      - name: Run Builder
+        working-directory: flutter_frontend
+        run: dart pub run build_runner build --delete-conflicting-outputs
       - name: Analyze Code
         working-directory: flutter_frontend
         run: flutter analyze
