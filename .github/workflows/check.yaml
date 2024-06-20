@@ -9,6 +9,6 @@ on:
 
 jobs:
   check-backend:
-    uses: ./rust-backend/.github/workflows/check.yaml
+    uses: qvest-digital/rust-and-flutter-demo/rust-backend/.github/workflows/check.yaml@main
   check-frontend:
-    uses: ./flutter_frontend/.github/workflows/check.yaml
+    uses: qvest-digital/rust-and-flutter-demo/flutter_frontend/.github/workflows/check.yaml@main
