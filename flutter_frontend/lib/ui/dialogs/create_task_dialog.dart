@@ -49,7 +49,7 @@ class CreateTaskDialog extends StatelessWidget {
             ),
             const Gap(16),
             SimpleDialogOption(
-              onPressed: () => context.read<AppRouter>().pop(),
+              onPressed: () => context.read<AppRouter>().maybePop(),
               child: const Text('Cancel'),
             ),
             SimpleDialogOption(
@@ -67,7 +67,7 @@ class CreateTaskDialog extends StatelessWidget {
                       ),
                     );
                   }
-                  router.pop();
+                  router.maybePop();
                 }
               },
               child: const Text('Save'),

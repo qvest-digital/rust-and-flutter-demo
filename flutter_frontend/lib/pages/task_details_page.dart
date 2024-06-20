@@ -19,7 +19,7 @@ class TaskDetailsPage extends StatelessWidget {
         builder: (context, model, _) => Scaffold(
           appBar: AppBar(
             leading: InkWell(
-              onTap: () => context.read<AppRouter>().pop(),
+              onTap: () => context.read<AppRouter>().maybePop(),
               child: const Icon(Icons.arrow_back),
             ),
             title: Text(
