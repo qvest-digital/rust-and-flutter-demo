@@ -8,7 +8,7 @@ edition = "2021"
 [dependencies]
 actix-web = "4.8.0"
 chrono = { version = "0.4.38", features = ["serde"] }
-env_logger = "0.11.3"
+env_logger = "0.11.5"
 r2d2 = "0.8.10"
 r2d2_sqlite = "0.24.0"
 rusqlite = "0.31.0"
