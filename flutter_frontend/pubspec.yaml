@@ -31,7 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  auto_route: ^9.2.0
+  auto_route: ^9.3.0+1
   cupertino_icons: ^1.0.8
   provider: ^6.1.2
   dio: ^5.7.0
